@@ -1,4 +1,4 @@
-# Liquid Noir for Hermes Desktop
+# Noir — Vazirmatn for Hermes Desktop
 
 A calm, Apple-inspired dark theme for Hermes Desktop with Vazirmatn typography and close charcoal surface layering.
 
@@ -12,24 +12,24 @@ A calm, Apple-inspired dark theme for Hermes Desktop with Vazirmatn typography a
 - Minimal hairline borders
 - Designed for long Hermes sessions
 
-This theme uses Hermes' supported `DesktopTheme` plugin API. It approximates the visual hierarchy of Liquid Glass through tonal layering; the plugin does not claim to add unsupported global blur, refraction, or motion-reactive highlights.
+This theme uses Hermes' supported `DesktopTheme` plugin API. It approximates a refined dark desktop aesthetic through tonal layering; the plugin does not claim to add unsupported global blur, refraction, or motion-reactive highlights.
 
 ## Install
 
-Hermes loads disk plugins from `$HERMES_HOME/desktop-plugins/<id>/plugin.js`. The repository folder and plugin ID are both `liquid-noir`.
+Hermes loads disk plugins from `$HERMES_HOME/desktop-plugins/<id>/plugin.js`. The repository folder and plugin ID are both `noir-vazirmatn`.
 
 ### macOS / Linux
 
 ```bash
-git clone https://github.com/mshojaei77/hermes-liquid-noir-theme.git \\
-  "${HERMES_HOME:-$HOME/.hermes}/desktop-plugins/liquid-noir"
+git clone https://github.com/mshojaei77/hermes-noir-vazirmatn-theme.git \\
+  "${HERMES_HOME:-$HOME/.hermes}/desktop-plugins/noir-vazirmatn"
 ```
 
 ### Windows PowerShell
 
 ```powershell
-git clone https://github.com/mshojaei77/hermes-liquid-noir-theme.git `
-  "$env:LOCALAPPDATA\hermes\desktop-plugins\liquid-noir"
+git clone https://github.com/mshojaei77/hermes-noir-vazirmatn-theme.git `
+  "$env:LOCALAPPDATA\hermes\desktop-plugins\noir-vazirmatn"
 ```
 
 If your Hermes home is customized, replace the destination with your actual `$HERMES_HOME` path.
@@ -39,7 +39,7 @@ Then open Hermes Desktop and, if it has not hot-reloaded automatically:
 1. Press `Ctrl+K`.
 2. Run **Reload desktop plugins**.
 3. Open **Settings → Appearance**.
-4. Select **Liquid Noir — Vazirmatn**.
+4. Select **Noir — Vazirmatn**.
 
 ### Optional installers
 
@@ -50,27 +50,27 @@ The repository also includes `install.sh` and `install.ps1`. Inspect them before
 ### macOS / Linux
 
 ```bash
-cd "${HERMES_HOME:-$HOME/.hermes}/desktop-plugins/liquid-noir"
+cd "${HERMES_HOME:-$HOME/.hermes}/desktop-plugins/noir-vazirmatn"
 git pull --ff-only
 ```
 
 ### Windows PowerShell
 
 ```powershell
-Set-Location "$env:LOCALAPPDATA\hermes\desktop-plugins\liquid-noir"
+Set-Location "$env:LOCALAPPDATA\hermes\desktop-plugins\noir-vazirmatn"
 git pull --ff-only
 ```
 
 ## Uninstall
 
-Remove the cloned `liquid-noir` directory from your Hermes desktop-plugins directory. For example:
+Remove the cloned `noir-vazirmatn` directory from your Hermes desktop-plugins directory. For example:
 
 ```powershell
-Remove-Item -Recurse -Force "$env:LOCALAPPDATA\hermes\desktop-plugins\liquid-noir"
+Remove-Item -Recurse -Force "$env:LOCALAPPDATA\hermes\desktop-plugins\noir-vazirmatn"
 ```
 
 ```bash
-rm -rf "${HERMES_HOME:-$HOME/.hermes}/desktop-plugins/liquid-noir"
+rm -rf "${HERMES_HOME:-$HOME/.hermes}/desktop-plugins/noir-vazirmatn"
 ```
 
 ## Compatibility

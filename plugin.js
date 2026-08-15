@@ -1,9 +1,9 @@
 import { THEMES_AREA } from '@hermes/plugin-sdk'
 
-const liquidNoirTheme = {
-  name: 'liquid-noir',
-  label: 'Liquid Noir — Vazirmatn',
-  description: 'Dark Liquid Glass-inspired Hermes theme with Vazirmatn Persian typography',
+const noirVazirmatnTheme = {
+  name: 'noir-vazirmatn',
+  label: 'Noir — Vazirmatn',
+  description: 'Dark neutral Hermes theme with Vazirmatn Persian typography',
 
   colors: {
     background: '#111214',
@@ -69,14 +69,14 @@ const liquidNoirTheme = {
 }
 
 export default {
-  id: 'liquid-noir',
-  name: 'Liquid Noir',
+  id: 'noir-vazirmatn',
+  name: 'Noir — Vazirmatn',
 
   register(ctx) {
     ctx.register({
-      id: 'liquid-noir-theme',
+      id: 'noir-vazirmatn-theme',
       area: THEMES_AREA,
-      data: liquidNoirTheme
+      data: noirVazirmatnTheme
     })
   }
 }
