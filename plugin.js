@@ -1,5 +1,3 @@
-import { THEMES_AREA } from '@hermes/plugin-sdk'
-
 const noirVazirmatnTheme = {
   name: 'noir-vazirmatn',
   label: 'Noir — Vazirmatn',
@@ -75,7 +73,7 @@ export default {
   register(ctx) {
     ctx.register({
       id: 'noir-vazirmatn-theme',
-      area: THEMES_AREA,
+      area: 'themes',
       data: noirVazirmatnTheme
     })
   }
