@@ -66,6 +66,30 @@ const noirVazirmatnTheme = {
   }
 }
 
+// Hermes can initialize its persisted skin before disk plugins finish loading.
+// In that race it temporarily normalizes a saved contributed theme to the
+// default and does not automatically re-read the preference when the registry
+// changes. Ask the existing ThemeProvider storage listener to resolve the saved
+// value again after this plugin registers.
+function refreshPersistedThemeSelection() {
+  if (typeof window === 'undefined') {
+    return
+  }
+
+  const refresh = () => {
+    try {
+      window.dispatchEvent(new StorageEvent('storage', { key: 'hermes-desktop-theme-v2' }))
+      window.dispatchEvent(new StorageEvent('storage', { key: 'hermes-desktop-profile-themes-v1' }))
+    } catch {
+      // Older Electron builds may not expose the StorageEvent constructor.
+      window.dispatchEvent(new Event('storage'))
+    }
+  }
+
+  refresh()
+  window.setTimeout(refresh, 50)
+}
+
 export default {
   id: 'noir-vazirmatn',
   name: 'Noir — Vazirmatn',
@@ -76,5 +100,6 @@ export default {
       area: 'themes',
       data: noirVazirmatnTheme
     })
+    refreshPersistedThemeSelection()
   }
 }
